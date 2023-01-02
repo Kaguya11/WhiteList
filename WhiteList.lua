@@ -1,7 +1,7 @@
-local whitelistecheck = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/White-List/main/DataBase", true))()
+local whitelistecheck = loadstring(game:HttpGet("", true))()
 
 if whitelistecheck[game:service('Players').LocalPlayer.UserId] then
-  print("yellow blue vase") -- Ваш скрипт
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaguya11/Kagu-Hub-v2/main/KaguHub.lua"))()) 
 else
-  game:service('Players').LocalPlayer:Kick('Bruh')
+  game:service('Players').LocalPlayer:Kick('Not WhiteListed')
 end
