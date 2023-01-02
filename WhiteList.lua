@@ -1,7 +1,7 @@
-local key = _G.Key
-local check = "https://raw.githubusercontent.com/Kaguya11/check/main/check.php?key=" .. key
-if game:HttpGet(check) == "Whitelisted" then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaguya11/Kagu-Hub-v2/main/KaguHub.lua"))()
+local whitelistecheck = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/White-List/main/DataBase", true))()
+
+if whitelistecheck[game:service('Players').LocalPlayer.UserId] then
+  print("yellow blue vase") -- Ваш скрипт
 else
-game.Players.LocalPlayer:Kick("Invalid Key! Please Rejoin And Try Again.")
+  game:service('Players').LocalPlayer:Kick('Bruh')
 end
